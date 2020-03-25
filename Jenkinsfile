@@ -8,6 +8,7 @@ node {
      sh "${mvnHome}/bin/mvn package"
        }
   stage('Sonarqube Analysis'){
+     def mvnHome = tool name: 'maven-3', type: 'maven'
     sh "${mvnHome}/bin/mvn sonar:sonar \
   -Dsonar.projectKey=jk-test-2 \
   -Dsonar.host.url=http://localhost:9000 \
