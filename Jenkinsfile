@@ -10,9 +10,9 @@ node {
   stage('Sonarqube Analysis'){
      def mvnHome = tool name: 'maven-3', type: 'maven'
     sh "${mvnHome}/bin/mvn sonar:sonar \
-  -Dsonar.projectKey=jk-test-2 \
+   -Dsonar.projectKey=newsonar \
   -Dsonar.host.url=http://localhost:9000 \
-  -Dsonar.login=1a716a653cc4982695f9c7d2647d1d9aa7568140"
+  -Dsonar.login=bbf95eb29f2ad25cbf7ff8cc3edb4db68ed3eca4
   }
   stage('Email Notification'){
 //  mail bcc: '', body: '''Hi WELCOME TO JENKINS EMAIL ALERT
