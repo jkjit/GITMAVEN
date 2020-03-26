@@ -12,7 +12,7 @@ node {
     sh "${mvnHome}/bin/mvn sonar:sonar \
    -Dsonar.projectKey=newsonar \
   -Dsonar.host.url=http://localhost:9000 \
-  -Dsonar.login=bbf95eb29f2ad25cbf7ff8cc3edb4db68ed3eca4
+  -Dsonar.login=bbf95eb29f2ad25cbf7ff8cc3edb4db68ed3eca4"
   }
   stage('Email Notification'){
 //  mail bcc: '', body: '''Hi WELCOME TO JENKINS EMAIL ALERT
